@@ -30,6 +30,7 @@
 	height: 100%;
 	padding: 1em;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .title {
@@ -40,4 +41,13 @@
 
 .cell:hover .title {
 	opacity: 1;
+}
+
+.overlay a {
+	color: #eee;
+	text-decoration: none;
+}
+
+.overlay a:hover {
+	text-decoration: underline;
 }

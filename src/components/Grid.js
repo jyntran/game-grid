@@ -12,7 +12,7 @@ class Grid extends Component {
     return (
       <div className="grid">
       {this.props.games.map(game =>
-        <Cell key={game.id} name={game.name} cover={game.cover} screenshots={game.screenshots}></Cell>
+        <Cell key={game.id} name={game.name} url={game.url} cover={game.cover} screenshots={game.screenshots}></Cell>
       )}
       </div>
     );

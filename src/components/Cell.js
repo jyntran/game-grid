@@ -28,7 +28,8 @@ class Cell extends Component {
       	<div className="cover">
       	</div>
         <div className="overlay">
-          <span className="title">{this.props.name}</span>
+          <span className="title" title={this.props.name}>          <a href={this.props.url}>
+{this.props.name}</a></span>
         </div>
       </div>
     );

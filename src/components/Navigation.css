@@ -1,0 +1,24 @@
+.navigation {
+	text-align: left;
+}
+
+.navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.navigation li {
+	display: inline-block;
+}
+
+.navigation a {
+	color: #ddd;
+	display: block;
+	padding-right: 1em;
+	text-decoration: none;
+}
+
+.navigation a:hover {
+	text-decoration: underline;
+}
