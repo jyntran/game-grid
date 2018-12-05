@@ -10,6 +10,7 @@
 
 .header h1 {
 	font-size: 1em;
+	font-family: 'Cairo', sans-serif;
 	margin: 0;
 	text-align: right;
 }

@@ -13,6 +13,7 @@
 }
 
 .navigation a {
+	font-family: 'Cairo', sans-serif;
 	color: #ddd;
 	display: block;
 	padding-right: 1em;

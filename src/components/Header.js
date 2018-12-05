@@ -6,7 +6,6 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <Navigation></Navigation>
         <div className="brand">
           <h1>bliptych</h1>
         </div>

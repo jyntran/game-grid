@@ -18,17 +18,31 @@ class Cell extends Component {
     return url;
   }
 
+  getCellWidth = function() {
+    const num = 160;
+    return num + 'px';
+  }
+
+  getCellHeight = function() {
+    return this.getCellWidth();
+  }
+
+
   render() {
 
+    const cellWidth = this.getCellWidth();
+    const cellHeight = this.getCellHeight();
+
+    const linkTitle = this.props.name + ' @ IGDB.com';
   	const imageURL = this.getImageURL();
     // style={{backgroundImage: 'url(' + imageURL + ')'}}>
 
     return (
-      <div className="cell" tabIndex="1">
-      	<div className="cover">
+      <div className="cell" tabIndex="1" style={{width: cellWidth, height: cellHeight}}>
+      	<div className="cover" style={{backgroundImage: 'url(' + imageURL + ')'}}>
       	</div>
         <div className="overlay">
-          <span className="title" title={this.props.name}>          <a href={this.props.url}>
+          <span className="title" title={linkTitle} target="_blank" rel="noopener noreferrer">          <a href={this.props.url}>
 {this.props.name}</a></span>
         </div>
       </div>
