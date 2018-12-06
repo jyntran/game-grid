@@ -1,0 +1,18 @@
+.tags {
+	font-size: .6em;
+	margin-bottom: .4em;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.tags .icon {
+	width: 2em;
+	height: 2em;
+	margin: .2em;
+}
+
+.tags .icon use {
+	fill: #000;
+	fill: rgba(0,0,0,.6);
+}

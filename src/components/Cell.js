@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Tags from './Tags';
 import './Cell.css';
 
 class Cell extends Component {
@@ -19,7 +20,7 @@ class Cell extends Component {
   }
 
   getCellWidth = function() {
-    const num = 160;
+    const num = 240;
     return num + 'px';
   }
 
@@ -27,6 +28,11 @@ class Cell extends Component {
     return this.getCellWidth();
   }
 
+  renderTags = function(tags) {
+    if (tags !== undefined) {
+      return <Tags tags={tags} />;
+    }
+  }
 
   render() {
 
@@ -39,11 +45,14 @@ class Cell extends Component {
 
     return (
       <div className="cell" tabIndex="1" style={{width: cellWidth, height: cellHeight}}>
-      	<div className="cover" style={{backgroundImage: 'url(' + imageURL + ')'}}>
+      	<div className="cover">
       	</div>
         <div className="overlay">
-          <span className="title" title={linkTitle} target="_blank" rel="noopener noreferrer">          <a href={this.props.url}>
-{this.props.name}</a></span>
+          {this.renderTags(this.props.tags)}
+          <span className="title">
+          <a href={this.props.url} title={linkTitle} target="_blank" rel="noopener noreferrer">
+{this.props.name}</a>
+          </span>
         </div>
       </div>
     );
