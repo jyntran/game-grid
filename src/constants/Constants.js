@@ -4,6 +4,11 @@ var CONSTANTS = {
   {
     "id": 7120,
     "name": "NieR",
+
+    "tags": [
+      "physical",
+      "playing"
+    ],
     "url": "https://www.igdb.com/games/nier",
     "genres": [
       5,
@@ -69,6 +74,11 @@ var CONSTANTS = {
     ],
     "id": 11549,
     "name": "Zero Escape: Zero Time Dilemma",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "platforms": [
       6,
       46,
@@ -112,6 +122,11 @@ var CONSTANTS = {
   {
     "id": 55090,
     "name": "Yakuza Kiwami 2",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/yakuza-kiwami-2",
     "genres": [
       12,
@@ -168,6 +183,11 @@ var CONSTANTS = {
   {
     "id": 493,
     "name": "Heavy Rain",
+
+    "tags": [
+      "digital",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/heavy-rain",
     "genres": [
       31
@@ -287,6 +307,11 @@ var CONSTANTS = {
   {
     "id": 2060,
     "name": "Yakuza 2",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/yakuza-2",
     "genres": [
       12,
@@ -360,6 +385,11 @@ var CONSTANTS = {
   {
     "id": 12527,
     "name": "Yakuza 6: The Song of Life",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/yakuza-6-the-song-of-life",
     "genres": [
       14,
@@ -411,6 +441,11 @@ var CONSTANTS = {
   {
     "id": 14362,
     "name": "Detroit: Become Human",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/detroit-become-human--1",
     "genres": [
       9,
@@ -517,6 +552,11 @@ var CONSTANTS = {
   {
     "id": 12595,
     "name": "Yakuza: Kiwami",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/yakuza-kiwami",
     "genres": [
       12,
@@ -570,6 +610,11 @@ var CONSTANTS = {
   {
     "id": 47772,
     "name": "Jake Hunter: Detective Story - Memories of the Past",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/jake-hunter-detective-story-memories-of-the-past",
     "platforms": [
       20
@@ -578,6 +623,11 @@ var CONSTANTS = {
   {
     "id": 19455,
     "name": "Final Fantasy XII: The Zodiac Age",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/final-fantasy-xii-the-zodiac-age",
     "genres": [
       12,
@@ -661,6 +711,11 @@ var CONSTANTS = {
   {
     "id": 1397,
     "name": "Professor Layton and the Curious Village",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/professor-layton-and-the-curious-village",
     "genres": [
       9,
@@ -754,6 +809,11 @@ var CONSTANTS = {
   {
     "id": 2449,
     "name": "Lightning Returns: Final Fantasy XIII",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/lightning-returns-final-fantasy-xiii",
     "genres": [
       12
@@ -831,6 +891,11 @@ var CONSTANTS = {
   {
     "id": 384,
     "name": "Final Fantasy XIII-2",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/final-fantasy-xiii-2/t_screenshot_med/",
     "genres": [
       12,
@@ -927,6 +992,11 @@ var CONSTANTS = {
   {
     "id": 389,
     "name": "Final Fantasy XIII",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/final-fantasy-xiii",
     "genres": [
       12,
@@ -1029,6 +1099,12 @@ var CONSTANTS = {
   {
     "id": 36926,
     "name": "Monster Hunter: World",
+
+    "tags": [
+      "physical",
+      "completed",
+      "playing"
+    ],
     "url": "https://www.igdb.com/games/monster-hunter-world",
     "genres": [
       12,
@@ -1173,6 +1249,11 @@ var CONSTANTS = {
   {
     "id": 359,
     "name": "Final Fantasy XV",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/final-fantasy-xv",
     "genres": [
       4,
@@ -1330,6 +1411,11 @@ var CONSTANTS = {
   {
     "id": 2059,
     "name": "Yakuza",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/yakuza",
     "genres": [
       4,
@@ -1424,6 +1510,11 @@ var CONSTANTS = {
   {
     "id": 7489,
     "name": "Yakuza: Dead Souls",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/yakuza-dead-souls",
     "genres": [
       5,
@@ -1500,6 +1591,11 @@ var CONSTANTS = {
   {
     "id": 11397,
     "name": "Yakuza 0",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/yakuza-0",
     "genres": [
       12,
@@ -1554,6 +1650,11 @@ var CONSTANTS = {
   {
     "id": 5328,
     "name": "Metal Gear Solid V: Ground Zeroes",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/metal-gear-solid-v-ground-zeroes",
     "genres": [
       5,
@@ -1609,6 +1710,11 @@ var CONSTANTS = {
   {
     "id": 1352,
     "name": "Journey",
+
+    "tags": [
+      "digital",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/journey",
     "genres": [
       7,
@@ -1738,6 +1844,11 @@ var CONSTANTS = {
   {
     "id": 382,
     "name": "Metal Gear Solid: Peace Walker",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/metal-gear-solid-peace-walker",
     "genres": [
       5,
@@ -1790,6 +1901,11 @@ var CONSTANTS = {
   {
     "id": 380,
     "name": "Metal Gear Solid 4: Guns of the Patriots",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/metal-gear-solid-4-guns-of-the-patriots",
     "genres": [
       5,
@@ -1873,6 +1989,11 @@ var CONSTANTS = {
   {
     "id": 379,
     "name": "Metal Gear Solid 3: Snake Eater",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/metal-gear-solid-3-snake-eater",
     "genres": [
       5,
@@ -1920,6 +2041,11 @@ var CONSTANTS = {
   {
     "id": 376,
     "name": "Metal Gear Solid 2: Sons of Liberty",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/metal-gear-solid-2-sons-of-liberty",
     "genres": [
       31
@@ -1995,6 +2121,11 @@ var CONSTANTS = {
   {
     "id": 3035,
     "name": "The Stanley Parable",
+
+    "tags": [
+      "digital",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/the-stanley-parable",
     "genres": [
       31,
@@ -2047,6 +2178,11 @@ var CONSTANTS = {
   {
     "id": 25039,
     "name": "Chase: Cold Case Investigations ~Distant Memories~",
+
+    "tags": [
+      "digital",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/chase-cold-case-investigations-~distant-memories~",
     "genres": [
       31
@@ -2120,6 +2256,11 @@ var CONSTANTS = {
   {
     "id": 6452,
     "name": "Tales of Zestiria",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/tales-of-zestiria",
     "genres": [
       12
@@ -2171,6 +2312,11 @@ var CONSTANTS = {
   {
     "id": 2063,
     "name": "Yakuza 5",
+
+    "tags": [
+      "digital",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/yakuza-5",
     "genres": [
       31
@@ -2221,6 +2367,11 @@ var CONSTANTS = {
   {
     "id": 2062,
     "name": "Yakuza 4",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/yakuza-4",
     "genres": [
       12,
@@ -2280,6 +2431,11 @@ var CONSTANTS = {
   {
     "id": 2061,
     "name": "Yakuza 3",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/yakuza-3",
     "genres": [
       12,
@@ -2370,6 +2526,11 @@ var CONSTANTS = {
   {
     "id": 1213,
     "name": "Tales of Xillia 2",
+
+    "tags": [
+      "digital",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/tales-of-xillia-2",
     "genres": [
       12
@@ -2419,6 +2580,11 @@ var CONSTANTS = {
   {
     "id": 1212,
     "name": "Tales of Xillia",
+
+    "tags": [
+      "digital",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/tales-of-xillia",
     "genres": [
       12
@@ -2524,6 +2690,11 @@ var CONSTANTS = {
   {
     "id": 43,
     "name": "Deus Ex: Human Revolution",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/deus-ex-human-revolution",
     "genres": [
       5,
@@ -2652,6 +2823,11 @@ var CONSTANTS = {
   {
     "id": 1209,
     "name": "Tales of Vesperia",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/tales-of-vesperia",
     "genres": [
       12
@@ -2728,6 +2904,11 @@ var CONSTANTS = {
   {
     "id": 1970,
     "name": "Assassin's Creed IV: Black Flag",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/assassin-s-creed-iv-black-flag",
     "genres": [
       8,
@@ -2899,6 +3080,11 @@ var CONSTANTS = {
   {
     "id": 22958,
     "name": "Last Window: The Secret of Cape West",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/last-window-the-secret-of-cape-west",
     "genres": [
       2,
@@ -2943,6 +3129,11 @@ var CONSTANTS = {
   {
     "id": 1443,
     "name": "Fire Emblem: Awakening",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/fire-emblem-awakening",
     "genres": [
       12,
@@ -3067,6 +3258,11 @@ var CONSTANTS = {
   {
     "id": 109,
     "name": "L.A. Noire",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/l-a-noire",
     "genres": [
       5,
@@ -3129,6 +3325,11 @@ var CONSTANTS = {
   {
     "id": 506,
     "name": "Sonic Generations",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/sonic-generations",
     "genres": [
       8,
@@ -3224,6 +3425,11 @@ var CONSTANTS = {
   {
     "id": 80621,
     "name": "Trace Memory",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/trace-memory",
     "platforms": [
       20
@@ -3300,6 +3506,11 @@ var CONSTANTS = {
   {
     "id": 1432,
     "name": "Phoenix Wright: Ace Attorney - Dual Destinies",
+
+    "tags": [
+      "digital",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/phoenix-wright-ace-attorney-dual-destinies",
     "genres": [
       9,
@@ -3407,6 +3618,11 @@ var CONSTANTS = {
   {
     "id": 6614,
     "name": "Zero Escape: Virtue's Last Reward",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/zero-escape-virtue-s-last-reward",
     "genres": [
       2,
@@ -3501,6 +3717,11 @@ var CONSTANTS = {
   {
     "id": 9249,
     "name": "Hotel Dusk: Room 215",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/hotel-dusk-room-215",
     "genres": [
       2,
@@ -3582,6 +3803,11 @@ var CONSTANTS = {
   {
     "id": 21049,
     "name": "Jake Hunter: Detective Chronicles",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/jake-hunter-detective-chronicles",
     "genres": [
       31
@@ -3607,6 +3833,11 @@ var CONSTANTS = {
   {
     "id": 1013,
     "name": "SoulCalibur V",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/soulcalibur-v",
     "genres": [
       4,
@@ -3686,6 +3917,11 @@ var CONSTANTS = {
   {
     "id": 7159,
     "name": "Resonance of Fate",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/resonance-of-fate",
     "genres": [
       12
@@ -3774,6 +4010,11 @@ var CONSTANTS = {
   {
     "id": 1266,
     "name": "Assassin's Creed III",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/assassin-s-creed-iii",
     "genres": [
       15,
@@ -3943,6 +4184,11 @@ var CONSTANTS = {
   {
     "id": 6231,
     "name": "Sonic the Hedgehog",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/sonic-the-hedgehog-473de878-5a9f-402e-a282-86a7460fc1d2",
     "genres": [
       8,
@@ -3995,6 +4241,11 @@ var CONSTANTS = {
   {
     "id": 7057,
     "name": "Lost Odyssey",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/lost-odyssey",
     "genres": [
       12,
@@ -4034,6 +4285,11 @@ var CONSTANTS = {
   {
     "id": 9543,
     "name": "Zero Escape: Nine Hours, Nine Persons, Nine Doors",
+
+    "tags": [
+      "physical",
+      "completed"
+    ],
     "url": "https://www.igdb.com/games/zero-escape-nine-hours-nine-persons-nine-doors",
     "genres": [
       2,
