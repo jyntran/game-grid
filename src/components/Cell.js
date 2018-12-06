@@ -45,7 +45,7 @@ class Cell extends Component {
 
     return (
       <div className="cell" tabIndex="1" style={{width: cellWidth, height: cellHeight}}>
-      	<div className="cover">
+      	<div className="cover" style={{backgroundImage: 'url(' + imageURL + ')'}}>
       	</div>
         <div className="overlay">
           {this.renderTags(this.props.tags)}
