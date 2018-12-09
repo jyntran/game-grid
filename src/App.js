@@ -1,29 +1,23 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Grid from './components/Grid';
-import GameService from './services/Game.service';
+import Completed from './components/Completed';
+import Playing from './components/Playing';
+import PileOfShame from './components/PileOfShame';
 import './App.css';
 
-const http = new GameService();
-
 class App extends Component {
-  state = {
-    data: ""
-  };
-
-	componentDidMount() {
-		const data = http.getData();
-		this.setState({
-			data: data
-		})
-	}
-
+  
   render() {
-//  const games = CONSTANTS.GAMES;
     return (
       <div className="App">
-      	<Header></Header>
-        <Grid games={this.state.data}></Grid>
+      	<Header />
+          <Switch>
+            <Route exact path="/" component={Playing} />
+            <Route path="/completed" component={Completed} />
+            <Route path="/playing" component={Playing} />
+            <Route path="/pile-of-shame" component={PileOfShame} />
+          </Switch>
       </div>
     );
   }

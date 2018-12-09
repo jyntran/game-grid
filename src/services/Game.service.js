@@ -1,4 +1,4 @@
-import axios from 'axios';
+import 'whatwg-fetch';
 
 class GameService {
 	constructor() {
@@ -8,10 +8,13 @@ class GameService {
 
 	getData() {
 		const url = '/games'
-		axios.get(url)
+		window.fetch(url)
 		.then(res => {
 			console.log(res.data)
 			return res.data
+		})
+		.catch(error => {
+			console.err(error)
 		})
 	}
 }

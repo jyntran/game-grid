@@ -1,28 +1,45 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 import Cell from './Cell';
 import './Grid.css';
 
 class Grid extends Component {
-  render() {
-    console.log(this.props.games)
-    if (this.props.games !== undefined && this.props.games !== "") {
-      return (
-        <div className="grid">
-        {this.props.games.map(game =>
-          <Cell
-          key={game.id}
-          name={game.name}
-          url={game.url}
-          cover={game.cover}
-          screenshots={game.screenshots} 
-          tags={game.tags}
-          >
-          </Cell>
-        )}
-        </div>
-      );
+
+  state = {
+    games: []
+  };
+
+  componentDidMount() {
+    let tags = ''
+    if (this.props.status) {
+      tags += this.props.status
     }
-    return <div className="grid"><h2>games not found</h2></div>
+    const url = '/games?tags=' + tags
+    axios.get(url)
+    .then(res => {
+      this.setState({games: res.data})
+    })
+    .catch(error => {
+      console.log('error')
+    })
+  }
+
+  render() {
+    return (
+      <div className="grid">
+      {this.state.games.map(game =>
+        <Cell
+        key={game.id}
+        name={game.name}
+        url={game.url}
+        cover={game.cover}
+        screenshots={game.screenshots} 
+        tags={game.tags}
+        >
+        </Cell>
+      )}
+      </div>
+    );
   }
 }
 

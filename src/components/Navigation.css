@@ -10,16 +10,20 @@
 
 .navigation li {
 	display: inline-block;
+	padding-right: 1em;
 }
 
 .navigation a {
 	font-family: 'Cairo', sans-serif;
 	color: #ddd;
 	display: block;
-	padding-right: 1em;
 	text-decoration: none;
 }
 
 .navigation a:hover {
 	text-decoration: underline;
+}
+
+.navigation a.activeLink {
+	border-bottom: thin solid #ddd;
 }

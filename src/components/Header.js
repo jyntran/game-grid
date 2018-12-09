@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Navigation from './Navigation';
+import Navigation from './Navigation'
 import './Header.css';
 
 class Header extends Component {
   render() {
     return (
       <div className="header">
+        <Navigation />
         <div className="brand">
           <h1>bliptych</h1>
         </div>

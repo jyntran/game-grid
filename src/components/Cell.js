@@ -8,24 +8,32 @@ class Cell extends Component {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
-  getImageURL = function() {
-    let url = '/images/gaming-pattern.png';
+  getImage = function() {
+    let img = {
+      url: '/images/gaming-pattern.png',
+      width: 240,
+      height: 240
+    };
     if (this.props.screenshots !== undefined && this.props.screenshots.length > 0) {
       const screenshotIndex = this.getRandomInt(0, this.props.screenshots.length-1);
-      url = this.props.screenshots[screenshotIndex].url;
+      img = this.props.screenshots[screenshotIndex];
+      img.width = 569
+      img.height = 320 
+    } else if (this.props.artwork !== undefined && this.props.artwork.length > 0) {
+      const artworkIndex = this.getRandomInt(0, this.props.artwork.length-1);
+      img = this.props.artwork[artworkIndex];
+      img.width = 569
+      img.height = 320 
     } else if (this.props.cover !== undefined) {
-      url = this.props.cover.url;
+      img = this.props.cover;
+      if (img.height >= 264) {
+        img.height = 264 
+      }
+      if (img.height >= 374) {
+        img.height = 374 
+      }
     }
-    return url;
-  }
-
-  getCellWidth = function() {
-    const num = 240;
-    return num + 'px';
-  }
-
-  getCellHeight = function() {
-    return this.getCellWidth();
+    return img
   }
 
   renderTags = function(tags) {
@@ -35,17 +43,11 @@ class Cell extends Component {
   }
 
   render() {
-
-    const cellWidth = this.getCellWidth();
-    const cellHeight = this.getCellHeight();
-
     const linkTitle = this.props.name + ' @ IGDB.com';
-  	const imageURL = this.getImageURL();
-    // style={{backgroundImage: 'url(' + imageURL + ')'}}>
-
+  	const image = this.getImage();
     return (
-      <div className="cell" tabIndex="1" style={{width: cellWidth, height: cellHeight}}>
-      	<div className="cover" style={{backgroundImage: 'url(' + imageURL + ')'}}>
+      <div className="cell" tabIndex="1" style={{width: image.width, height: image.height}}>
+      	<div className="cover" style={{backgroundImage: 'url(' + image.url + ')'}}>
       	</div>
         <div className="overlay">
           {this.renderTags(this.props.tags)}

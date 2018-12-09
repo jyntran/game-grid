@@ -36,7 +36,10 @@ class Tags extends Component {
     const tagClass = "icon icon-" + tag;
     const tagHash = "#icon-" + tag;
     return (
+      <div className="tag" title={tagName}>
       <svg className={tagClass}><use xlinkHref={tagHash}></use></svg>
+      <div className="tagLabel"><span>{tagName}</span></div>
+      </div>
     );
   }
 
