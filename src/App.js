@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Completed from './components/Completed';
-import Playing from './components/Playing';
-import PileOfShame from './components/PileOfShame';
+import Games from './components/Games';
+import NotFound from './components/NotFound';
 import './App.css';
 
 class App extends Component {
@@ -12,12 +11,14 @@ class App extends Component {
     return (
       <div className="App">
       	<Header />
-          <Switch>
-            <Route exact path="/" component={Playing} />
-            <Route path="/completed" component={Completed} />
-            <Route path="/playing" component={Playing} />
-            <Route path="/pile-of-shame" component={PileOfShame} />
-          </Switch>
+        <Switch>
+          <Route exact path={["/", "/games/playing"]} render={()=><Games tags={["playing"]} sort={"name"}/>} />
+          <Route path="/games/completed" render={()=><Games tags={["completed"]} sort={"completedOn"} order={"desc"}/>} />
+          <Route path="/games/wishlist" render={()=><Games tags={["wishlist"]} sort={"name"}/>} />
+          <Route path="/games/backlog" render={()=><Games tags={["notplayed"]}/>} />        
+          <Route path="/games/pile-of-shame" render={()=><Games tags={["brandnew"]}/>} />        
+          <Route path="*" component={NotFound}/>        
+        </Switch>  
       </div>
     );
   }

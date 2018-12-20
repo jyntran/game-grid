@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import classNames from 'classnames'
 import axios from 'axios'
 import Cell from './Cell';
-import './Grid.css';
+import './Cloud.css';
 
-class Grid extends Component {
+class Cloud extends Component {
 
   state = {
     games: [],
-    mode: "thumbnail"
+    mode: 'thumbnail',
+    isLoading: true,
+    height: '100%',
+    positions: []
   };
 
   BASE_URL = '/api/games?'
@@ -18,6 +22,16 @@ class Grid extends Component {
   } 
 
   getGames() {
+    /* https://stackoverflow.com/a/48942924 */
+    const scrollToTop = () => {
+      const c = document.documentElement.scrollTop || document.body.scrollTop;
+      if (c > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, c - c / 8);
+      }
+    };
+    scrollToTop();
+    this.setState({isLoading: true})
     let tags = []
     let url = this.BASE_URL
     let hasQuery = false
@@ -39,9 +53,17 @@ class Grid extends Component {
     }
     axios.get(url)
     .then(res => {
+      let component = this
+      setTimeout(function() {
+        component.setState({isLoading: false})
+      }, 2000)
       this.setState({games: res.data})
     })
     .catch(error => {
+      let component = this
+      setTimeout(function() {
+        component.setState({isLoading: false})
+      }, 2000)
       console.log('error')
     })
   }
@@ -64,15 +86,21 @@ class Grid extends Component {
       newMode = "thumbnail"
     }
     this.setState({mode: newMode})
+    console.log('mode: ' + this.state.mode)
   }
 
   render() {
+    const cloudClass = classNames({cloud: true, loading: this.state.isLoading})
     return (
       <div>
         <div className="options">
-          <button onClick={this.onChangeMode}>Thumbnail/Large</button>
         </div>
-        <div className="grid">
+        <div className={cloudClass}
+        style={{height: this.state.height}}>
+        <div className="cloudLoading">
+            <svg className="icon icon-hour-glass" aria-hidden="true"><use xlinkHref='#icon-hour-glass'></use></svg>
+            <p>LOADING</p>
+        </div>
         {this.state.games.map(game =>
           <Cell
           key={game.id}
@@ -91,4 +119,4 @@ class Grid extends Component {
   }
 }
 
-export default Grid;
+export default Cloud;

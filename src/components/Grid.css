@@ -2,6 +2,24 @@
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	margin-top: 3em;
-	color: white;
+}
+
+.options {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.options button {
+	background-color: #eee;
+	border: thin solid #ccc;
+	border-radius: .5em;
+	padding: 1em;
+	color: #333;
+}
+
+.options button:hover,
+.options button:focus {
+	background-color: #333;
+	color: #eee;
 }

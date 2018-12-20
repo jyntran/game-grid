@@ -7,9 +7,11 @@ class Navigation extends Component {
     return (
       <div className="navigation">
         <ul>
-          <li><NavLink to="/playing" activeClassName="activeLink">Playing</NavLink></li>
-        	<li><NavLink to="/completed" activeClassName="activeLink">Completed</NavLink></li>
-        	<li><NavLink to="/pile-of-shame" activeClassName="activeLink">Pile of Shame</NavLink></li>
+          <li><NavLink exact to="/" activeClassName="activeLink">Playing</NavLink></li>
+        	<li><NavLink exact to="/games/completed" activeClassName="activeLink">Completed</NavLink></li>
+          <li><NavLink exact to="/games/wishlist" activeClassName="activeLink">Wishlist</NavLink></li>
+          <li><NavLink exact to="/games/backlog" activeClassName="activeLink">Backlog</NavLink></li>
+          <li><NavLink exact to="/games/pile-of-shame" activeClassName="activeLink">Pile of Shame</NavLink></li>
         </ul>
       </div>
     );

@@ -1,18 +1,54 @@
-.cell {
-	background-color: #333;
+.cell-container {
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90px;
+	height: 90px;
+	transition: all 3s;
+}
+
+.cloud .cell-container {
+	opacity: 1;
+}
+
+.cloud.loading .cell-container {
+	opacity: 0;
+}
+
+.cell {
+	position: relative;
+	transition: all .3s;
+}
+
+.cell.thumbnail {
+	width: 80px;
+	height: 80px;
+	position: relative;
+	opacity: .8;
+	box-shadow: 0 0 2em .25em rgba(255,255,255,.5);
+	animation: float 3s ease infinite;
+}
+
+.cell.thumbnail.loading,
+.cell.thumbnail.loading .cover {
+	box-shadow: none;
+}
+
+.cell.large {
+	width: 569px;
+	height: 320px;
 }
 
 .cover {
 	/* Background pattern from Toptal Subtle Patterns */
-	background-color: #ddd;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	box-shadow: 0 0 .1em .05em inset rgba(255,255,255,.8);
 	width: 100%;
 	height: 100%;
 	position: absolute;
-    transition: .3s all linear;
 }
 
 .overlay {
@@ -52,7 +88,72 @@
 	opacity: 1;
 }
 
-.cell:hover .cover,
-.cell:focus .cover {
-	background-blend-mode: exclusion;
+.cell.thumbnail .overlay {
+	display: none;
+}
+
+.cell.thumbnail:hover,
+.cell.thumbnail:focus {
+	width: 90px !important;
+	height: 90px !important;
+	opacity: 1;
+	box-shadow: 0 0 4em rgba(255,255,255,1);
+	z-index: 5;
+}
+
+.cell.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,0);
+}
+
+.cell.icon.loading {
+	background-color: rgba(0,0,0,.7);
+}
+
+.cell.icon .icon {
+	width: 1em;
+	height: 1em;
+	transition: all 3s;
+}
+
+.cell.icon .icon use {
+	fill: #666;
+    transform-origin: center;
+	animation: hourglass-spin 2s infinite;
+}
+
+@keyframes hourglass-spin {
+  0%   {
+	transform: rotate(0deg);
+	animation-timing-function: linear;
+  }
+  50%   {
+	transform: rotate(180deg);
+	animation-timing-function: step-start;
+  }
+  75%   {
+	transform: rotate(180deg);
+	animation-timing-function: step-start;
+  }
+  100%   {
+	transform: rotate(360deg);
+	animation-timing-function: linear;
+  }
+}
+
+@keyframes float {
+  0%	 {
+  	top: 0px;
+  }
+  50% {
+  	top: -11px;
+  }
+  100% {
+  	top: 0px;
+  }
 }

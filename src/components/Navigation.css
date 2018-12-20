@@ -1,5 +1,7 @@
 .navigation {
 	text-align: left;
+	margin-bottom: 1em;
+	color: #333;
 }
 
 .navigation ul {
@@ -15,15 +17,15 @@
 
 .navigation a {
 	font-family: 'Cairo', sans-serif;
-	color: #ddd;
+	color: #333;
 	display: block;
 	text-decoration: none;
 }
 
 .navigation a:hover {
-	text-decoration: underline;
+	border-bottom: thin solid #333;
 }
 
 .navigation a.activeLink {
-	border-bottom: thin solid #ddd;
+	border-bottom: thin solid #333;
 }

@@ -1,11 +1,13 @@
 .header {
 	width: 100%;
 	position: fixed;
-	background-color: #333;
-	color: #ddd;
+	background: linear-gradient(#f1e767 50%, transparent);
+	color: #333;
     padding: 1em;
     box-sizing: border-box;
-    z-index: 2;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 10;
 }
 
 .header h1 {
@@ -21,4 +23,15 @@
 
 .header .brand {
 	float: right;
+}
+
+.header .brand a {
+	font-family: 'Cairo', sans-serif;
+	color: #333;
+	display: block;
+	text-decoration: none;
+}
+
+.header .brand a:hover {
+	border-bottom: thin solid #333;
 }

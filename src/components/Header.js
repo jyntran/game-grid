@@ -8,7 +8,9 @@ class Header extends Component {
       <div className="header">
         <Navigation />
         <div className="brand">
-          <h1>bliptych</h1>
+          <h1>
+            bliptych
+          </h1>
         </div>
       </div>
     );

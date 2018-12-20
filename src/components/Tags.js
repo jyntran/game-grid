@@ -6,7 +6,10 @@ class Tags extends Component {
   renderIcon = function(tagName) {
     var tag = "";
     switch(tagName) {
-      case "unopened":
+      case "brandnew":
+        tag = "price-tag";
+        break;
+      case "notplayed":
         tag = "new";
         break;
       case "playing":
@@ -37,7 +40,7 @@ class Tags extends Component {
     const tagHash = "#icon-" + tag;
     return (
       <div className="tag" title={tagName}>
-      <svg className={tagClass}><use xlinkHref={tagHash}></use></svg>
+      <svg className={tagClass} aria-hidden="true"><use xlinkHref={tagHash}></use></svg>
       <div className="tagLabel"><span>{tagName}</span></div>
       </div>
     );
