@@ -109,6 +109,8 @@ class Cloud extends Component {
           cover={game.cover}
           screenshots={game.screenshots} 
           tags={game.tags}
+          platforms={game.platforms}
+          own={game.own}
           mode={this.state.mode}
           >
           </Cell>

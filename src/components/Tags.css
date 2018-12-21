@@ -1,9 +1,5 @@
 .tags {
-	font-size: .6em;
-	margin-bottom: 1em;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+	margin: 1em;
 }
 
 .tags .icon {
@@ -13,15 +9,13 @@
 }
 
 .tags .icon use {
-	fill: #fff;
+	fill: #333;
 }
 
 .tag {
-	font-size: 1.2em;
-	font-family: 'Ubuntu Mono', monospace;
-	color: #fff;
-	background-color: #000;
-	background-color: rgba(0,0,0,.6);
+	font-size: 1em;
+	color: #333;
 	padding: .5em;
+	margin: 0 1em;
 	display: inline-block;
 }

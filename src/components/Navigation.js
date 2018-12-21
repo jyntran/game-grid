@@ -11,7 +11,6 @@ class Navigation extends Component {
         	<li><NavLink exact to="/games/completed" activeClassName="activeLink">Completed</NavLink></li>
           <li><NavLink exact to="/games/wishlist" activeClassName="activeLink">Wishlist</NavLink></li>
           <li><NavLink exact to="/games/backlog" activeClassName="activeLink">Backlog</NavLink></li>
-          <li><NavLink exact to="/games/pile-of-shame" activeClassName="activeLink">Pile of Shame</NavLink></li>
         </ul>
       </div>
     );

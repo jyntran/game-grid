@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import Tags from './Tags';
+import Info from './Info';
 import './Cell.css';
 
 class Cell extends Component {
 
   state = {
-    image: {
-      url: '/images/gaming-pattern.png',
-    },
-    isLoading: true
   }
 
   imgIndex = null;
@@ -20,6 +16,14 @@ class Cell extends Component {
 
   constructor(props) {
     super(props)
+    this.state = {
+      image: {
+        url: '/images/gaming-pattern.png',
+      },
+      isLoading: true,
+      openInfo: false
+    }
+    this.onClick = this.onClick.bind(this)
     if (this.props.screenshots !== undefined && this.props.screenshots.length > 0) {
       this.imgIndex = this.getRandomInt(0, this.props.screenshots.length-1);
     } else if (this.props.artwork !== undefined && this.props.artwork.length > 0) {
@@ -47,8 +51,9 @@ class Cell extends Component {
   }
 
   getPosition = function() {
-    this.posX = this.getRandomInt(5, 90) + '%';
-    this.posY = '0%' //this.getRandomInt(5, 90) + '%';
+    const x = this.getRandomInt(5, 85)
+    this.posX = x + '%';
+    this.posY = '0%';
   }
 
   getSize = function() {
@@ -92,12 +97,6 @@ class Cell extends Component {
     return img
   }
 
-  renderTags = function(tags) {
-    if (tags !== undefined) {
-      return <Tags tags={tags} />;
-    }
-  }
-
   renderOverlay = function() {
       const linkTitle = this.props.name + ' @ IGDB.com';
       return (
@@ -111,6 +110,19 @@ class Cell extends Component {
       )
   }
 
+  handleOverflow() {
+    if (this.state.openInfo) {
+      document.body.classList.remove('modal-open')
+    } else {
+      document.body.classList.add('modal-open')
+    }
+  }
+
+  onClick = function(e) {
+    this.setState({openInfo: !this.state.openInfo})
+    this.handleOverflow()
+  }
+
   render() {
   	const image = this.state.image;
     const cellClass = classNames({
@@ -119,15 +131,51 @@ class Cell extends Component {
       thumbnail: this.props.mode === 'thumbnail',
       loading: this.state.isLoading
     })
+    const infoClass = classNames({
+      info: true,
+      visible: this.state.openInfo
+    })
+    const infoCloseClass = classNames({
+      infoClose: true,
+      visible: this.state.openInfo
+    })
     return (
-      <div className="cell-container" tabIndex="1" style={{top: this.posY, left: this.posX}}>
-        <div className={cellClass} style={{width: this.width, height: this.height}}>
-          <div className="cell icon">
-            <svg className="icon icon-hour-glass" aria-hidden="true"><use xlinkHref='#icon-hour-glass'></use></svg>
+      <div>
+        <div className="cell-container" tabIndex="1" style={{top: this.posY, left: this.posX}}
+          onClick={this.onClick}>
+          <div className={cellClass} style={{width: this.width, height: this.height}}>
+            <div className="cell icon">
+              <svg className="icon icon-hour-glass" aria-hidden="true"><use xlinkHref='#icon-hour-glass'></use></svg>
+            </div>
+          	<div className="cover" style={{backgroundImage: 'url(' + image.url + ')'}} title={this.props.name}>
+          	</div>
           </div>
-        	<div className="cover" style={{backgroundImage: 'url(' + image.url + ')'}} title={this.props.name}>
-        	</div>
-          {this.renderOverlay()}
+        </div>
+        <div className="cell-label">
+          <span>{this.props.name}</span>
+          <span>{this.props.name}</span>
+          <span>{this.props.name}</span>
+          <span>{this.props.name}</span>
+          <span>{this.props.name}</span>
+        </div>
+        <div className={infoClass}>
+        <div
+          className={infoCloseClass}
+          onClick={this.onClick}
+          tabIndex="1">
+          <svg className="icon icon-circle-with-cross"><use xlinkHref='#icon-circle-with-cross'></use></svg>
+        </div>
+        <Info
+          onClick={this.onClick}
+          name={this.props.name}
+          url={this.props.url}
+          cover={this.props.cover}
+          screenshots={this.props.screenshots} 
+          tags={this.props.tags}
+          platforms={this.props.platforms}
+          own={this.props.own}
+          mode={this.state.mode}
+        />
         </div>
       </div>
     );

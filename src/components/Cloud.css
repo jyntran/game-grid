@@ -1,5 +1,7 @@
 .cloud {
 	width: 100%;
+	overflow: hidden;
+	padding-top: 1em;
 	transition: all 4s;
 }
 

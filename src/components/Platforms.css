@@ -1,0 +1,31 @@
+.platforms {
+	margin: auto;
+    max-width: 320px;
+}
+
+.platforms .icon {
+	width: 2em;
+	height: 2em;
+	margin-right: 1em;
+}
+
+.platform {
+    font-size: 1em;
+    padding: .5em 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: thin solid #333;
+    border-radius: 1em;
+    margin: 0 1em;
+}
+
+@media (max-width: 420px) {
+    .platform {
+        flex-direction: column;
+    }
+    .platforms .icon {
+        margin-right: 0;
+    }
+}

@@ -6,13 +6,13 @@ import NotFound from './components/NotFound';
 import './App.css';
 
 class App extends Component {
-  
+
   render() {
     return (
       <div className="App">
       	<Header />
         <Switch>
-          <Route exact path={["/", "/games/playing"]} render={()=><Games tags={["playing"]} sort={"name"}/>} />
+          <Route exact path="/" render={()=><Games tags={["playing"]} sort={"name"}/>} />
           <Route path="/games/completed" render={()=><Games tags={["completed"]} sort={"completedOn"} order={"desc"}/>} />
           <Route path="/games/wishlist" render={()=><Games tags={["wishlist"]} sort={"name"}/>} />
           <Route path="/games/backlog" render={()=><Games tags={["notplayed"]}/>} />        
