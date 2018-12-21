@@ -46,6 +46,7 @@
     width: 3em;
     height: 3em;
     z-index: 12;
+    cursor: pointer;
 }
 
 .infoClose .icon {
@@ -88,8 +89,19 @@
 	border: thin solid rgba(255,255,255,.5);
 }
 
+.metadata table {
+	margin: auto;
+	border-collapse: collapse;
+	width: 100%;
+    max-width: 360px;
+}
+
+.metadata table td:first-child {
+	font-weight: bold;
+}
+
 .screenshots {
-	margin: 1em;
+	margin: 2em;
 }
 
 .screenshot-container {
@@ -100,8 +112,8 @@
 	width: 100%;
     max-width: 569px;
 	height: auto;	
+	min-height: 320px;
 	margin: auto;
-	border: thin solid rgba(255,255,255,.5);
 }
 
 .screenshot-container .icon {
@@ -110,10 +122,12 @@
     height: 5em;
 	opacity: .5;
 	transition: all 3s;
+	border: thin solid rgba(255,255,255,.5);
 	animation: hourglass-spin 2s infinite;
 }
 
 .screenshot {
     position: relative;
     width: 100%;
+    background: rgba(255,255,255,.4);
 }

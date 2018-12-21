@@ -100,19 +100,6 @@ class Cell extends Component {
     return img
   }
 
-  renderOverlay = function() {
-      const linkTitle = this.props.name + ' @ IGDB.com';
-      return (
-        <div className="overlay">
-        {this.renderTags(this.props.tags.sort())}
-        <span className="title">
-        <a href={this.props.url} title={linkTitle} target="_blank" rel="noopener noreferrer">
-  {this.props.name}</a>
-        </span>
-        </div>
-      )
-  }
-
   handleOverflow() {
     if (this.state.openInfo) {
       document.body.classList.remove('modal-open')
@@ -150,7 +137,7 @@ class Cell extends Component {
             <div className="cell-icon">
               <svg className="icon icon-hour-glass" aria-hidden="true"><use xlinkHref='#icon-hour-glass'></use></svg>
             </div>
-          	<div className="cover" style={{backgroundImage: 'url(' + image.url + ')'}} title={this.props.name}>
+          	<div className="cover" style={{backgroundImage: 'url(' + image.url + ')'}}>
           	</div>
           </div>
         <div className="cell-label">
@@ -174,6 +161,7 @@ class Cell extends Component {
           cover={this.props.cover}
           screenshots={this.props.screenshots} 
           tags={this.props.tags}
+          metadata={this.props.metadata}
           platforms={this.props.platforms}
           own={this.props.own}
           mode={this.state.mode}

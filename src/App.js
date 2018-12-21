@@ -15,8 +15,7 @@ class App extends Component {
           <Route exact path="/" render={()=><Games tags={["playing"]} sort={"name"}/>} />
           <Route path="/games/completed" render={()=><Games tags={["completed"]} sort={"completedOn"} order={"desc"}/>} />
           <Route path="/games/wishlist" render={()=><Games tags={["wishlist"]} sort={"name"}/>} />
-          <Route path="/games/backlog" render={()=><Games tags={["notplayed"]}/>} />        
-          <Route path="/games/pile-of-shame" render={()=><Games tags={["brandnew"]}/>} />        
+          <Route path="/games/backlog" render={()=><Games tags={["notplayed","paused"]}/>} />        
           <Route path="*" component={NotFound}/>        
         </Switch>  
       </div>

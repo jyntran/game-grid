@@ -9,6 +9,10 @@
 	margin-right: 1em;
 }
 
+.platforms .icon use {
+    fill: #eee;
+}
+
 .platform {
     font-size: 1em;
     padding: .5em 1em;
@@ -16,8 +20,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: thin solid #333;
-    border-radius: 1em;
+    border-radius: 2em;
+    background: #333;
+    color: #eee;
     margin: 0 1em;
 }
 
