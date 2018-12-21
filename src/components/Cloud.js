@@ -10,8 +10,7 @@ class Cloud extends Component {
     games: [],
     mode: 'thumbnail',
     isLoading: true,
-    height: '100%',
-    positions: []
+    height: '100%'
   };
 
   BASE_URL = '/api/games?'

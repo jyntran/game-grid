@@ -39,7 +39,7 @@ class Info extends Component {
     const altText = "Screenshot "+ index 
     const url = screenshot.url.replace('t_thumb', 't_screenshot_med')
     return (
-      <div class="screenshot-container">
+      <div className="screenshot-container" key={index}>
         <svg className="icon icon-hour-glass" aria-hidden="true"><use xlinkHref='#icon-hour-glass'></use></svg>
         <img className="screenshot" src={url} alt={altText}/>
       </div>

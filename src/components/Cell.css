@@ -1,4 +1,4 @@
-.cell-container {
+.cell {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -9,11 +9,11 @@
 	transition: all 3s;
 }
 
-.cloud .cell-container {
+.cloud .cell {
 	opacity: 1;
 }
 
-.cloud.loading .cell-container {
+.cloud.loading .cell {
 	opacity: 0;
 }
 
@@ -22,7 +22,7 @@
 	transition: all .3s;
 }
 
-.cell.thumbnail {
+.cell {
 	width: 80px;
 	height: 80px;
 	top: 6px;
@@ -31,8 +31,8 @@
 	animation: float 3s ease infinite;
 }
 
-.cell.thumbnail.loading,
-.cell.thumbnail.loading .cover {
+.cell.loading,
+.cell.loading .cover {
 	box-shadow: none;
 }
 
@@ -52,34 +52,35 @@
 	position: absolute;
 }
 
-.cell.thumbnail:hover {
+.cell:hover {
 	width: 90px !important;
 	height: 90px !important;
+	margin: 0 !important;
 	box-shadow: 0 0 4em rgba(255,255,255,1);
 }
 
-.cell.icon {
+.cell-icon {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background-color: rgba(0,0,0,0);
+	background-color: #333;
 }
 
-.cell.icon.loading {
+.cell-icon.loading {
 	background-color: rgba(0,0,0,.7);
 }
 
-.cell.icon .icon {
+.cell-icon .icon {
 	width: 1em;
 	height: 1em;
 	transition: all 3s;
 }
 
-.cell.icon .icon use {
-	fill: #666;
+.cell-icon .icon use {
+	fill: #eee;
     transform-origin: center;
 	animation: hourglass-spin 2s infinite;
 }
@@ -94,7 +95,7 @@
     align-items: center;
     width: 100%;
     height: 45px;
-	top: -66px;
+	top: -68px;
     left: 0;
     padding: 0 10em;
     position: relative;
@@ -132,7 +133,7 @@
 }
 
 
-.cell-container:hover ~ .cell-label {
+.cell:hover ~ .cell-label {
 	opacity: 1;
 }
 

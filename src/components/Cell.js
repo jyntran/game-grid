@@ -13,6 +13,7 @@ class Cell extends Component {
   poxY = '50%';
   width = '90px';
   height = '90px';
+  margin = '90px';
 
   constructor(props) {
     super(props)
@@ -57,8 +58,10 @@ class Cell extends Component {
   }
 
   getSize = function() {
-    this.width = this.getRandomInt(33, 66) + 'px';
+    const w = this.getRandomInt(33, 66)
+    this.width = w + 'px';
     this.height = this.width;
+    this.margin = (90 - w) / 2 + 'px'
   }
 
   getImage = function() {
@@ -141,16 +144,15 @@ class Cell extends Component {
     })
     return (
       <div>
-        <div className="cell-container" tabIndex="1" style={{top: this.posY, left: this.posX}}
+          <div className={cellClass} tabIndex="1"
+          style={{top: this.posY, left: this.posX, width: this.width, height: this.height, margin: this.margin}}
           onClick={this.onClick}>
-          <div className={cellClass} style={{width: this.width, height: this.height}}>
-            <div className="cell icon">
+            <div className="cell-icon">
               <svg className="icon icon-hour-glass" aria-hidden="true"><use xlinkHref='#icon-hour-glass'></use></svg>
             </div>
           	<div className="cover" style={{backgroundImage: 'url(' + image.url + ')'}} title={this.props.name}>
           	</div>
           </div>
-        </div>
         <div className="cell-label">
           <span>{this.props.name}</span>
           <span>{this.props.name}</span>
